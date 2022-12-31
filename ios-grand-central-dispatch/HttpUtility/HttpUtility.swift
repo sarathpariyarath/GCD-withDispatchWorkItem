@@ -35,10 +35,6 @@ class HttpUtility {
                         print(error.localizedDescription)
                     }
                 }
-                
-              
-            } else {
-                print(error?.localizedDescription)
             }
         }.resume()
     }

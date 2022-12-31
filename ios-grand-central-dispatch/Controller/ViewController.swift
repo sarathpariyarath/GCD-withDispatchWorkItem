@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,19 +20,17 @@ class ViewController: UIViewController {
         self.searchBar.delegate = self
         fetchWholeData()
     }
-
+    
     func fetchWholeData() {
-        APIManagerClass.sharedInstance.sortAnimals(keyword: "") { result in
-            
-            if result.data.count != 0 {
-                
-                self.animalsArray = result.data
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+        APIManagerClass.sharedInstance.sortAnimals(
+            keyword: ""
+        ){ result in
+            self.animalsArray = result.data
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
     }
-
+    
 }
 
