@@ -13,6 +13,10 @@
 		3726D12F2960471300B479B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3726D12D2960471300B479B1 /* Main.storyboard */; };
 		3726D1312960471400B479B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3726D1302960471400B479B1 /* Assets.xcassets */; };
 		3726D1342960471400B479B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3726D1322960471400B479B1 /* LaunchScreen.storyboard */; };
+		3726D13D2960542500B479B1 /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726D13C2960542500B479B1 /* HttpUtility.swift */; };
+		3726D1402960546400B479B1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726D13F2960546400B479B1 /* APIManager.swift */; };
+		3726D143296054B000B479B1 /* VC + SearchBar Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726D142296054B000B479B1 /* VC + SearchBar Extensions.swift */; };
+		3726D145296054D000B479B1 /* VC + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726D144296054D000B479B1 /* VC + TableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		3726D1302960471400B479B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3726D1332960471400B479B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3726D1352960471400B479B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3726D13C2960542500B479B1 /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
+		3726D13F2960546400B479B1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		3726D142296054B000B479B1 /* VC + SearchBar Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC + SearchBar Extensions.swift"; sourceTree = "<group>"; };
+		3726D144296054D000B479B1 /* VC + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC + TableViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,41 @@
 			children = (
 				3726D1272960471300B479B1 /* AppDelegate.swift */,
 				3726D1292960471300B479B1 /* SceneDelegate.swift */,
-				3726D12B2960471300B479B1 /* ViewController.swift */,
+				3726D13E2960545500B479B1 /* APIManager */,
+				3726D13B29604CB500B479B1 /* HttpUtility */,
+				3726D1412960548500B479B1 /* Controller */,
 				3726D12D2960471300B479B1 /* Main.storyboard */,
 				3726D1302960471400B479B1 /* Assets.xcassets */,
 				3726D1322960471400B479B1 /* LaunchScreen.storyboard */,
 				3726D1352960471400B479B1 /* Info.plist */,
 			);
 			path = "ios-grand-central-dispatch";
+			sourceTree = "<group>";
+		};
+		3726D13B29604CB500B479B1 /* HttpUtility */ = {
+			isa = PBXGroup;
+			children = (
+				3726D13C2960542500B479B1 /* HttpUtility.swift */,
+			);
+			path = HttpUtility;
+			sourceTree = "<group>";
+		};
+		3726D13E2960545500B479B1 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				3726D13F2960546400B479B1 /* APIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		3726D1412960548500B479B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3726D12B2960471300B479B1 /* ViewController.swift */,
+				3726D142296054B000B479B1 /* VC + SearchBar Extensions.swift */,
+				3726D144296054D000B479B1 /* VC + TableViewDelegate.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3726D13D2960542500B479B1 /* HttpUtility.swift in Sources */,
 				3726D12C2960471300B479B1 /* ViewController.swift in Sources */,
+				3726D1402960546400B479B1 /* APIManager.swift in Sources */,
+				3726D145296054D000B479B1 /* VC + TableViewDelegate.swift in Sources */,
+				3726D143296054B000B479B1 /* VC + SearchBar Extensions.swift in Sources */,
 				3726D1282960471300B479B1 /* AppDelegate.swift in Sources */,
 				3726D12A2960471300B479B1 /* SceneDelegate.swift in Sources */,
 			);

@@ -7,28 +7,32 @@
 
 import UIKit
 
-
-
-
-
-
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var animalsArray: [String]? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.tableView.dataSource = self
+        self.searchBar.delegate = self
+        fetchWholeData()
     }
 
-
-}
-
-extension ViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        APIManagerClass.sharedInstance.sortAnimals(keyword: searchText) { result in
-            print(result)
+    func fetchWholeData() {
+        APIManagerClass.sharedInstance.sortAnimals(keyword: "") { result in
+            
+            if result.data.count != 0 {
+                
+                self.animalsArray = result.data
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
         }
     }
+
 }
+
